@@ -7,7 +7,7 @@ function PortfolioFooter() {
       <h2 className="font-['Cormorant_Garamond'] text-[24px] font-light ">
         Browse More Makers
       </h2>
-      <p className=" font-['Inter'] text-[12px] font-normal pb-4 py-3 md:py-0">
+      <p className=" font-['Inter'] text-[12px] font-normal pb-4 px-4 py-4 md:py-2">
         With a pro account, you can browse additional qualified makers, and send
         them requests for proposals.
       </p>

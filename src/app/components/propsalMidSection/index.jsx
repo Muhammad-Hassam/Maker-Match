@@ -104,8 +104,7 @@ const ProposalMidSection = () => {
                   better.
                 </p>
               </div>
-
-              <div className="pt-9">
+              <div className="pt-9 mb-9 lg:mb-0">
                 <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   SUBMITTED
                 </p>
