@@ -59,55 +59,59 @@ const ProposalMidSection = () => {
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
               <div className="pt-9">
-                <p className="text-[12px] uppercase text-[#6B6B6B] pb-1">
+                <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   description
                 </p>
-                <p className="text-[14px] uppercase text-black">
+                <p className="text-[14px] font-['Inter'] uppercase text-black">
                   Coffee Table, Burl Wood Veneer, Indoor, Round, Plinth, 40"W x
                   18"H
                 </p>
               </div>
 
               <div className="pt-9">
-                <p className="text-[12px] uppercase text-[#6B6B6B] pb-1">
+                <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   budget
                 </p>
-                <p className="text-[14px] uppercase text-black">$9000</p>
+                <p className="text-[14px] font-['Inter'] uppercase text-black">
+                  $9000
+                </p>
               </div>
 
               <div className="pt-9">
-                <p className="text-[12px] uppercase text-[#6B6B6B] pb-1">
+                <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   preferred maker location
                 </p>
-                <p className="text-[14px] uppercase text-black">
+                <p className="text-[14px] font-['Inter'] uppercase text-black">
                   Within 50 miles of 94513
                 </p>
               </div>
 
               <div className="pt-9">
-                <p className="text-[12px] uppercase text-[#6B6B6B] pb-1">
+                <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   Desired Completion Date
                 </p>
-                <p className="text-[14px] uppercase text-black">
+                <p className="text-[14px] font-['Inter'] uppercase text-black">
                   June 15, 2025
                 </p>
               </div>
 
               <div className="pt-9">
-                <p className="text-[12px] uppercase text-[#6B6B6B] pb-1">
+                <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   notes to maker (optional)
                 </p>
-                <p className="text-[14px] uppercase text-black">
+                <p className="text-[14px] font-['Inter'] uppercase text-black">
                   I’m open to your material suggestions if something works
                   better.
                 </p>
               </div>
 
               <div className="pt-9">
-                <p className="text-[12px] uppercase text-[#6B6B6B] pb-1">
+                <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   SUBMITTED
                 </p>
-                <p className="text-[14px] uppercase text-black">Aug 25, 2026</p>
+                <p className="text-[14px] font-['Inter'] uppercase text-black">
+                  Aug 25, 2026
+                </p>
               </div>
             </motion.div>
           )}
