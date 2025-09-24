@@ -7,6 +7,8 @@ import ProjectTabs from "./projectTabs";
 import PortfolioHeader from "./header/portfolioHeader";
 import PortfolioMasonry from "./portfolioMasonry";
 import PortfolioNav from "./portfolioNav";
+import PortfolioModal from "./modal/portfolioModal";
+import PortfolioFooter from "./portfolioFooter";
 
 export {
   ProductCard,
@@ -17,5 +19,7 @@ export {
   ProjectTabs,
   PortfolioHeader,
   PortfolioMasonry,
-  PortfolioNav
+  PortfolioNav,
+  PortfolioModal,
+  PortfolioFooter
 };

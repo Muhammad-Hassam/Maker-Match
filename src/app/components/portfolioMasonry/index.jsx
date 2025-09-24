@@ -7,7 +7,7 @@ export default function MasonryGallery() {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-4 w-full max-w-8xl mx-auto px-8">
+    <div className="grid grid-cols-2 gap-4 w-full md:max-w-8xl mx-auto px-2 md:px-8">
       {columns.map((col, colIdx) => (
         <div key={colIdx} className="grid gap-4">
           {col.map((img, i) => (
