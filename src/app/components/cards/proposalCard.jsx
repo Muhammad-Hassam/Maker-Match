@@ -6,6 +6,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import Image from "next/image";
 import React from "react";
 import { Button } from "..";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 function ProposalCard({ data, onOpenModal }) {
   return (
@@ -15,56 +16,100 @@ function ProposalCard({ data, onOpenModal }) {
       <div className="block lg:flex">
         <div className="hidden lg:flex items-center">
           <p className="font-['Cormorant_Garamond'] text-[56px] font-light align-middle pr-6">
-            02
+            {data?.itemNo}
           </p>
         </div>
-        <div className="w-full lg:w-[580px] flex relative">
+        <div className="w-full lg:w-[580px] relative ">
           <div
-            className="absolute top-0 left-0 h-[75px] w-[75px] lg:hidden flex justify-center items-center"
-            style={{
-              background: colors.offWhite
-            }}
+            className="absolute top-0 left-0 h-[75px] w-[75px] flex justify-center items-center z-10 lg:hidden"
+            style={{ background: colors.offWhite }}
           >
             <p className="text-black font-['Cormorant_Garamond'] text-[46px] font-light">
-              02
+              {data?.itemNo}
             </p>
           </div>
-          <div className="w-1/2">
-            <Image
-              src={data?.image1}
-              alt="Product Image"
-              className="w-full h-full"
-            />
+          <div className="flex lg:hidden w-full mb-5">
+            <Swiper
+              pagination={{ clickable: true }}
+              slidesPerView={1.1}
+              spaceBetween={10}
+              centeredSlides={false}
+              className="w-full"
+            >
+              <SwiperSlide>
+                <Image
+                  src={data?.image1}
+                  alt="Product Image"
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover "
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <div
+                  className="relative w-full h-full cursor-pointer"
+                  onClick={onOpenModal}
+                >
+                  <Image
+                    src={data?.image2}
+                    alt="Product Image"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 w-full h-[48px] bg-[#0000004D] flex items-center px-5">
+                    <p className="text-white text-[11px] font-['Inter'] font-normal pr-1">
+                      PORTFOLIO
+                    </p>
+                    <BsArrowUpRight className="text-white text-[11px]" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
-
-          <div className="w-1/2 relative cursor-pointer" onClick={onOpenModal}>
-            <Image
-              src={data?.image2}
-              alt="Product Image"
-              className="w-full h-full"
-            />
-            <div className="absolute bottom-0 left-0 w-full h-[48px] bg-[#0000004D] flex items-center px-5">
-              <p className="text-white text-[11px] font-['Inter'] font-normal pr-1">
-                PORTFOLIO
-              </p>
-              <BsArrowUpRight className="text-white text-[11px]" />
+          <div className="hidden lg:flex w-full">
+            <div className="w-1/2">
+              <Image
+                src={data?.image1}
+                alt="Product Image"
+                className="w-full h-full object-cover"
+                width={600}
+                height={400}
+              />
+            </div>
+            <div
+              className="w-1/2 ml-1 relative cursor-pointer"
+              onClick={onOpenModal}
+            >
+              <Image
+                src={data?.image2}
+                alt="Product Image"
+                className="w-full h-full object-cover"
+                width={600}
+                height={400}
+              />
+              <div className="absolute bottom-0 left-0 w-full h-[48px] bg-[#0000004D] flex items-center px-5">
+                <p className="text-white text-[11px] font-['Inter'] font-normal pr-1">
+                  PORTFOLIO
+                </p>
+                <BsArrowUpRight className="text-white text-[11px]" />
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="block lg:flex lg:flex-col justify-between lg:pl-8">
+        <div className="block lg:flex lg:flex-col justify-between lg:pl-8 lg:max-h-[386px]">
           <div>
             <p className="font-['Cormorant_Garamond'] text-[24px] font-light text-black pb-1">
               {data?.name}
             </p>
-            <p className="font-['Inter'] text-[12px] font-normal text-black">
+            <p className="font-['Inter'] text-[12px] font-normal text-black uppercase">
               Los Angeles, CA
             </p>
             <div className="hidden lg:block ">
-              <p className="font-['Inter'] text-[12px] font-normal text-[#78583C] pt-10 pb-1">
+              <p className="font-['Inter'] text-[12px] font-normal text-[#78583C] pt-10 pb-2 uppercase">
                 view Profile
               </p>
-              <p className="font-['Inter'] text-[12px] font-normal text-[#78583C]">
+              <p className="font-['Inter'] text-[12px] font-normal text-[#78583C] uppercase">
                 schedule a consultation
               </p>
             </div>
@@ -84,7 +129,7 @@ function ProposalCard({ data, onOpenModal }) {
         </div>
       </div>
       <div className="lg:border-l-2 lg:border-l-[#E2DCD4] block lg:flex lg:flex-col justify-between w-full lg:w-[22%] lg:px-[3%]">
-        <div className=" mb-4 lg:pb-0">
+        <div className=" mb-6 lg:pb-0">
           <p className="font-['Cormorant_Garamond'] text-[24px] font-light text-black">
             $9000
           </p>
@@ -103,11 +148,11 @@ function ProposalCard({ data, onOpenModal }) {
           </div>
         </div>
       </div>
-      <div className="lg:hidden block mt-3 mb-4">
-        <p className="font-['Inter'] text-[12px] font-normal text-[#78583C]  pb-1">
+      <div className="lg:hidden block mt-6 mb-4">
+        <p className="font-['Inter'] text-[12px] font-normal text-[#78583C]  pb-1 uppercase">
           view Profile
         </p>
-        <p className="font-['Inter'] text-[12px] font-normal text-[#78583C]">
+        <p className="font-['Inter'] text-[12px] font-normal text-[#78583C] uppercase">
           schedule a consultation
         </p>
       </div>

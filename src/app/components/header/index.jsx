@@ -9,8 +9,8 @@ import { Button } from "..";
 
 function Header({ button }) {
   return (
-    <div className="pt-5 px-3 md:px-7">
-      <div className="flex justify-between">
+    <div className="pt-5 px-5 md:px-7">
+      <div className="flex justify-between ">
         <div className="flex">
           <RxHamburgerMenu className="text-black text-[18px] mr-7" />
           <CiSearch className="text-black text-[18px]" />
@@ -24,7 +24,7 @@ function Header({ button }) {
           <Image
             src={SMLogo}
             alt="Logo"
-            className="block md:hidden w-[33px] h-[30px]"
+            className="block md:hidden w-[33px] h-[30px] mb-3"
           />
         </div>
         <div className="flex">

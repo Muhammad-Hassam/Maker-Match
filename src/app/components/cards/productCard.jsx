@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { ProductImage } from "@/assets/images";
 import Image from "next/image";
 import { colors } from "@/styles/colors";
 import { useRouter } from "next/navigation";
@@ -10,7 +9,7 @@ function ProductCard({ data }) {
 
   return (
     <div
-      className="w-[94%] sm:w-[94%] md:w-[48%] xl:w-[23%] mx-[3%] sm:mx-[1%] mt-[6%] md:mt-[2%] cursor-pointer "
+      className="w-[94%] sm:w-[94%] md:w-[48%] xl:w-[23%] mx-[4.5%] sm:mx-[1%] mt-[6%] md:mt-[2%] cursor-pointer "
       onClick={() => router.push("/portfolio")}
     >
       <div className="w-full relative bg-[#FDF8F8]">
@@ -28,12 +27,12 @@ function ProductCard({ data }) {
           </div>
         )}
       </div>
-      <div className="bg-white pl-4 pb-2">
+      <div className="bg-[#FFFFFF] pl-4 pb-2">
         <h3 className="font-['Cormorant_Garamond'] text-[18px] pt-4 pb-2">
           {data?.name}
         </h3>
         <p
-          className="font-['Inter'] text-[11px]  pb-5"
+          className="font-['Inter'] text-[11px]  pb-5 uppercase"
           style={{ color: colors.lightblack }}
         >
           {data?.variation}

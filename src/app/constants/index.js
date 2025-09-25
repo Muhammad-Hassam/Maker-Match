@@ -49,12 +49,14 @@ export const products = [
 
 export const porposal = [
   {
+    itemNo: "01",
     image1: Proposal1a,
     image2: Proposal1b,
     name: "Emelie Abrahamsson",
     ammount: "$9000"
   },
   {
+    itemNo: "02",
     image1: Portfolio,
     image2: Table,
     name: "Darrin Garret",

@@ -14,12 +14,12 @@ const ProposalMidSection = () => {
         dropDown ? "90%" : "50%"
       }] m-auto block md:flex items-center justify-center`}
       animate={{ width: dropDown ? "90%" : "50%" }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
+      transition={{ duration: 0.9, ease: "easeInOut" }}
     >
       <motion.div
-        className="pr-0 md:pr-8 w-[100%] md:w-[50%]"
+        className="pr-0 w-[100%] md:w-[50%]"
         animate={{ scale: dropDown ? 1.1 : 1 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
+        transition={{ duration: 0.9, ease: "easeInOut" }}
       >
         <Image
           src={Burl}
@@ -34,7 +34,8 @@ const ProposalMidSection = () => {
         </h1>
 
         <div
-          className={`flex items-center pb-8 md:pb-3 ${
+          onClick={() => setDropDown(!dropDown)}
+          className={`flex items-center pb-3  cursor-pointer md:pb-3 ${
             dropDown ? "justify-between" : "justify-center md:justify-start"
           } text-[#78583C] 
   ${dropDown && " border-b-1"} border-b-[#78583C] w-full`}
@@ -42,12 +43,7 @@ const ProposalMidSection = () => {
           <p className="font-['Inter'] text-[12px] font-normal uppercase pr-1 text-center md:text-left">
             view project details
           </p>
-          <div
-            onClick={() => setDropDown(!dropDown)}
-            className="cursor-pointer"
-          >
-            {dropDown ? <IoIosArrowUp /> : <IoIosArrowDown />}
-          </div>
+          <div>{dropDown ? <IoIosArrowUp /> : <IoIosArrowDown />}</div>
         </div>
 
         <AnimatePresence>
@@ -58,7 +54,7 @@ const ProposalMidSection = () => {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              <div className="pt-9">
+              <div className="pt-7 md:pt-9">
                 <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   description
                 </p>
@@ -68,7 +64,7 @@ const ProposalMidSection = () => {
                 </p>
               </div>
 
-              <div className="pt-9">
+              <div className="pt-6 md:pt-9">
                 <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   budget
                 </p>
@@ -77,7 +73,7 @@ const ProposalMidSection = () => {
                 </p>
               </div>
 
-              <div className="pt-9">
+              <div className="pt-6 md:pt-9">
                 <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   preferred maker location
                 </p>
@@ -86,7 +82,7 @@ const ProposalMidSection = () => {
                 </p>
               </div>
 
-              <div className="pt-9">
+              <div className="pt-6 md:pt-9">
                 <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   Desired Completion Date
                 </p>
@@ -95,7 +91,7 @@ const ProposalMidSection = () => {
                 </p>
               </div>
 
-              <div className="pt-9">
+              <div className="pt-6 md:pt-9">
                 <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   notes to maker (optional)
                 </p>
@@ -104,7 +100,7 @@ const ProposalMidSection = () => {
                   better.
                 </p>
               </div>
-              <div className="pt-9 mb-9 lg:mb-0">
+              <div className="pt-6 md:pt-9 mb-9 lg:mb-0">
                 <p className="text-[12px] font-['Inter'] uppercase text-[#6B6B6B] pb-1">
                   SUBMITTED
                 </p>

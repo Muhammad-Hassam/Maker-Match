@@ -20,23 +20,23 @@ function PortfolioHeader({ onClose }) {
         </div>
         <div className="flex flex-col justify-between">
           <div>
-            <p className="font-['Cormorant_Garamond'] text-[32px] font-light text-black pb-1">
+            <p className="font-['Cormorant_Garamond'] text-[32px] font-light text-black line-height: 1">
               Darrin Garret
             </p>
-            <p className="font-['Inter'] text-[12px] font-normal text-black">
+            <p className="font-['Inter'] text-[12px] font-normal text-black ">
               Los Angeles, CA
             </p>
-            <div className="flex mt-1">
+            <div className="flex mt-2">
               <LiaCheckCircleSolid size={18} color="#766B5A" />
-              <p className="font-['Inter'] text-[12px] font-normal text-black pl-1">
+              <p className="font-['Inter'] text-[12px] font-normal text-black pl-1 uppercase">
                 ID Verified
               </p>
             </div>
           </div>
           <div className="flex">
-            <AiOutlineMail className="text-[#766B5A] text-[18px] mr-5" />
-            <IoMdHeartEmpty className="text-[#766B5A] text-[18px] mr-5" />
-            <PiUploadSimpleLight className="text-[#766B5A] text-[18px] mr-2" />
+            <AiOutlineMail className="text-[#766B5A] text-[20px] mr-5" />
+            <IoMdHeartEmpty className="text-[#766B5A] text-[20px] mr-5" />
+            <PiUploadSimpleLight className="text-[#766B5A] text-[20px] mr-2" />
           </div>
         </div>
       </div>
